@@ -108,7 +108,7 @@ fi
 echo
 echo "--- Updating pto-profile.sh ---"
 update_config "$PTOPROF_FILE" \
-    "s|DEVICE_BASE_IP=\"${OLD_IP_GATEWAY}\\.\"|DEVICE_BASE_IP=\"${IP_BASE}.\"|" \
+    "s|DEVICE_BASE_IP=\"${OLD_IP_GATEWAY}\\.\"|DEVICE_BASE_IP=\"${IP_BASE}\"|" \
     's|export GATEWAY="${DEVICE_BASE_IP}.*"|export GATEWAY="${DEVICE_BASE_IP}1"|'
 
 if [[ $? -eq 0 ]]; then
